@@ -78,15 +78,7 @@ const run = async () => {
         
         try {
             response = await axios.post(`${baseUrl}/admin/api/2022-04/customers.json`, {
-                customer: {
-                    first_name: name.first,
-                    last_name: name.last,
-                    email: email,
-                    phone: phone,
-                    addresses: [
-                        address
-                    ]
-                }
+                customer
             }, { 
                 headers: { 'X-Shopify-Access-Token': config.access_token } 
             });
